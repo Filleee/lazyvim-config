@@ -1,4 +1,9 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
 if not vim.loop.fs_stat(lazypath) then
   -- bootstrap lazy.nvim
   -- stylua: ignore
@@ -9,6 +14,8 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 --
 --
 
+--
+-- require("lspconfig").gleam.setup({})
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
