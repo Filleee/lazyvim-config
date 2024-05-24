@@ -6,6 +6,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 -- vim.api.nvim_exec("language en_US", true)
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
+--
+--
 
 require("lazy").setup({
   spec = {
